@@ -1,5 +1,7 @@
 Django==1.8.1
 Fabric==1.10.1
+django-custom-user==0.5
+django-allauth==0.19.1
 django_compressor==1.5
 # django-libsass
 # django-pyscss

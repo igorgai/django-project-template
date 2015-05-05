@@ -10,6 +10,19 @@ django.settings_module('{{ project_name }}.settings')
 import django
 django.setup()
 
+from django.contrib.auth import get_user_model
+
+ADMIN_EMAIL_ADDRESS = 'admin@example.com'
+
+
+def add_admin():
+    user_model = get_user_model()
+    admin = user_model(email=ADMIN_EMAIL_ADDRESS)
+    admin.is_superuser = True
+    admin.is_staff = True
+    admin.set_password('admin')
+    admin.save()
+
 
 # def add_foo():
 #     pass

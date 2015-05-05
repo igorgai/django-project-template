@@ -28,25 +28,52 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
 INSTALLED_APPS = (
+    'apps.users',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
+    'custom_user',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'sorl.thumbnail',
     'djangobower',
     'compressor',
 
-    # custom apps list
+    # project apps list
     # 'apps.foo',
     # 'apps.bar',
 )
+
+AUTH_USER_MODEL = 'users.CustomEmailUser'
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_SIGNUP_FORM_CLASS = 'apps.users.forms.CustomSignupForm'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,11 +100,29 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
+                "allauth.account.context_processors.account",
+                "allauth.socialaccount.context_processors.socialaccount",
+
                 'super_hero_team.context_processors.head_body_settings',
             ],
         },
     },
 ]
+
+# todo after django-allauth update supporting django1.8 template system remove the following
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.template.context_processors.debug',
+    # Required by `allauth` template tags
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+
+    # `allauth` specific context processors
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
+
+    'super_hero_team.context_processors.head_body_settings',
+)
 
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
