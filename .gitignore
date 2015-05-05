@@ -1,3 +1,9 @@
 *.idea/
 *.py[co]
+
+# OS X-related files
 .DS_Store
+
+# Project-specific list
+*.sqlite3
+local.py
