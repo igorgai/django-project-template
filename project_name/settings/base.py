@@ -103,7 +103,7 @@ TEMPLATES = [
                 "allauth.account.context_processors.account",
                 "allauth.socialaccount.context_processors.socialaccount",
 
-                'super_hero_team.context_processors.head_body_settings',
+                '{{ project_name }}.context_processors.head_body_settings',
             ],
         },
     },
@@ -121,7 +121,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'allauth.account.context_processors.account',
     'allauth.socialaccount.context_processors.socialaccount',
 
-    'super_hero_team.context_processors.head_body_settings',
+    '{{ project_name }}.context_processors.head_body_settings',
 )
 
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'

@@ -1,7 +1,7 @@
 from .base import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+# SECRET_KEY = ''
 
 DEBUG = True
 THUMBNAIL_DEBUG = DEBUG

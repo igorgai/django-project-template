@@ -35,6 +35,8 @@ def initial_data():
     puts('==> Creating the db...')
     local('python manage.py migrate')
     local('python manage.py bower install')
+    puts('==> Creating the superuser...')
+    add_admin()
     puts('==> Adding initial data...')
     # add_foo()
     puts('==> All done. Please do your thing and leave :)')
