@@ -40,3 +40,10 @@ EMAIL_USE_TLS = True
 #         'LOCATION': '127.0.0.1:11211',
 #     }
 # }
+
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+    # ('text/x-scss', 'django_pyscss.compressor.DjangoScssFilter'),
+    # ('text/x-scss', 'sass --style compressed {infile} {outfile}'),
+)

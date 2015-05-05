@@ -1,0 +1,7 @@
+Django==1.8.1
+django_compressor==1.5
+# django-libsass
+# django-pyscss
+Pillow==2.8.1
+sorl-thumbnail==12.2
+django-bower==5.0.4

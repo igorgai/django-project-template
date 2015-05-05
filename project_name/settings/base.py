@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf.global_settings import STATICFILES_FINDERS
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,6 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'sorl.thumbnail',
+    'djangobower',
+    'compressor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +60,7 @@ ROOT_URLCONF = '{{ project_name }}.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,3 +105,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+PUBLIC_ROOT = os.path.join(BASE_DIR, '../', 'public')
+MEDIA_ROOT = os.path.join(PUBLIC_ROOT, 'media')
+STATIC_ROOT = os.path.join(PUBLIC_ROOT, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_FINDERS += (
+    'compressor.finders.CompressorFinder',
+    'djangobower.finders.BowerFinder',
+)
+
+BOWER_COMPONENTS_ROOT = os.path.join(os.path.join(BASE_DIR, 'static'), 'components')
+
+BOWER_INSTALLED_APPS = (
+    # 'jquery#2.1.3',
+)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+    # ('text/x-scss', 'django_pyscss.compressor.DjangoScssFilter'),
+    # ('text/x-scss', 'sass --style compressed {infile} {outfile}'),
+)

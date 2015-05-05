@@ -6,4 +6,6 @@
 
 # Project-specific list
 *.sqlite3
+public
+{{ project_name }}/static/components/
 local.py
