@@ -16,6 +16,7 @@ django-admin startproject <projectname> --template=https://github.com/igorgai/dj
 ```
 #!python
 pip install -r requirements/dev.txt
+fab initial_data
 
 ```
 
