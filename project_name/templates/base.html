@@ -1,0 +1,30 @@
+{% load static compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block head_title %}{% endblock %} | {{ project_name }}</title>
+
+    {% compress css %}
+      <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/style.scss' %}"/>
+    {% endcompress %}
+
+    {% block styles %}{% endblock %}
+
+    {{ HEAD_CLOSING|safe }}
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    {% block content %}{% endblock %}
+
+    {% include "parts/scripts.html" %}
+
+    {% block scripts %}{% endblock %}
+
+    {{ BODY_CLOSING|safe }}
+  </body>
+</html>

@@ -42,6 +42,10 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'djangobower',
     'compressor',
+
+    # custom apps list
+    # 'apps.foo',
+    # 'apps.bar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,6 +72,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'super_hero_team.context_processors.head_body_settings',
             ],
         },
     },
