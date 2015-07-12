@@ -1,10 +1,11 @@
-Django==1.8.1
-Fabric==1.10.1
+Django==1.8.3
+Fabric==1.10.2
+Pillow==2.9.0
 django-custom-user==0.5
-django-allauth==0.19.1
+django-allauth==0.21.0
+django-appconf==1.0.1
 django_compressor==1.5
 # django-libsass
 # django-pyscss
-Pillow==2.8.1
-sorl-thumbnail==12.2
+sorl-thumbnail==12.3
 django-bower==5.0.4
