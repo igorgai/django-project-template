@@ -22,6 +22,14 @@ fab initial_data
 
 Next copy the file *{{ project_name }}/settings/local.example.py* and place it in the same directory under name *"local.py"*.
 
+#### Create superuser
+
+```
+#!bash
+
+python manage.py createsuperuser
+```
+
 #### Html/css/js dependencies
 
 ```
