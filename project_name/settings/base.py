@@ -56,7 +56,7 @@ INSTALLED_APPS = (
     # 'apps.bar',
 )
 
-AUTH_USER_MODEL = 'users.CustomEmailUser'
+AUTH_USER_MODEL = 'users.User'
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`

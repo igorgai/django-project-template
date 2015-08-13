@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 from custom_user.models import AbstractEmailUser
 
 
-class CustomEmailUser(AbstractEmailUser):
+class User(AbstractEmailUser):
     """
     Extending custom user EmailUser model
     """
@@ -15,6 +15,6 @@ class CustomEmailUser(AbstractEmailUser):
         if self.first_name and self.last_name:
             return self.first_name + ' ' + self.last_name
         else:
-            return super(CustomEmailUser, self).get_full_name()
+            return super(User, self).get_full_name()
 
     get_full_name.short_description = 'Full name'
