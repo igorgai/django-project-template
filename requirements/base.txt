@@ -4,8 +4,7 @@ Pillow==2.9.0
 django-custom-user==0.5
 django-allauth==0.27.0
 django-appconf==1.0.1
-django_compressor==1.5
+django_compressor==2.1
 # django-libsass
 # django-pyscss
 sorl-thumbnail==12.3
-django-bower==5.0.4
