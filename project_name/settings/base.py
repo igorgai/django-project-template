@@ -48,7 +48,6 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'sorl.thumbnail',
-    'djangobower',
     'compressor',
 
     # project apps list
@@ -177,10 +176,7 @@ STATICFILES_DIRS = (
 
 STATICFILES_FINDERS += (
     'compressor.finders.CompressorFinder',
-    'djangobower.finders.BowerFinder',
 )
-
-BOWER_COMPONENTS_ROOT = os.path.join(os.path.join(BASE_DIR, 'static'), 'components')
 
 BOWER_INSTALLED_APPS = (
     # 'jquery#2.1.3',
