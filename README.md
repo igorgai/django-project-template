@@ -40,6 +40,6 @@ npm -g install bower (Node should be installed)
 
 ```
 #!python
-python manage.py bower install
+bower install
 
 ```
