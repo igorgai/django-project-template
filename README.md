@@ -5,7 +5,7 @@
 ```
 #!bash
 
-django-admin.py startproject <projectname> --template=https://github.com/igorgai/django-project-template/archive/master.zip --name=.gitignore --name=README.md
+django-admin.py startproject <projectname> --template=https://github.com/igorgai/django-project-template/archive/master.zip --name=.gitignore --extension=json,html --name=README.md
 ```
 
 ### Basic setup ###
