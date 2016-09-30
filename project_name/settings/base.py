@@ -178,9 +178,6 @@ STATICFILES_FINDERS += (
     'compressor.finders.CompressorFinder',
 )
 
-BOWER_INSTALLED_APPS = (
-    # 'jquery#2.1.3',
-)
 
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
