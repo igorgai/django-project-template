@@ -1,0 +1,3 @@
+{
+    "directory": "{{ project_name }}/static/components"
+}
