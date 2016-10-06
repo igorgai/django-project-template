@@ -16,7 +16,7 @@ from django.conf.global_settings import STATICFILES_FINDERS
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+PROJECT_NAME = '{{ project_name }}'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
 
