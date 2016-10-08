@@ -15,4 +15,9 @@ def head_body_settings(request):
     except AttributeError:
         pass
 
+    try:
+        context['PROJECT_NAME'] = settings.PROJECT_NAME
+    except AttributeError:
+        pass
+
     return context
