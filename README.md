@@ -36,10 +36,6 @@ python manage.py createsuperuser
 #!bash
 
 npm -g install bower (Node should be installed)
-```
-
-```
-#!python
 bower install
-
 ```
+
