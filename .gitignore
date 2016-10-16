@@ -7,5 +7,5 @@
 # Project-specific list
 *.sqlite3
 public
-{{ project_name }}/static/components/
+{{ project_name }}/static/bower_components/
 local.py
