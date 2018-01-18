@@ -10,9 +10,9 @@ THUMBNAIL_DEBUG = DEBUG
 
 # ALLOWED_HOSTS = ['127.0.0.1']
 
-INSTALLED_APPS += (
-    # 'django-debug-toolbar',
-)
+INSTALLED_APPS += [
+    # 'debug_toolbar',
+]
 
 DATABASES = {
     'default': {

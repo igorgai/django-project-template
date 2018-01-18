@@ -1,0 +1,27 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+django-debug-toolbar = "*"
+sphinx = "*"
+coverage = "*"
+"flake8" = "*"
+pytest = "*"
+tox = "*"
+
+
+[packages]
+
+django = "==2.0"
+"fabric3" = "*"
+pillow = "*"
+django-custom-user = "*"
+django-allauth = "*"
+sorl-thumbnail = "*"
+django-compressor = "*"
+django-libsass = "*"

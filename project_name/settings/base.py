@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from django.conf.global_settings import STATICFILES_FINDERS
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PROJECT_NAME = '{{ project_name }}'
@@ -32,7 +32,7 @@ SITE_ID = 1
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'apps.users',
 
     'django.contrib.admin',
@@ -53,7 +53,7 @@ INSTALLED_APPS = (
     # project apps list
     # 'apps.foo',
     # 'apps.bar',
-)
+]
 
 AUTH_USER_MODEL = 'users.User'
 
