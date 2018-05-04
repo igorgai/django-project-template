@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     'compressor',
 
     # project apps list
-    # 'apps.foo',
-    # 'apps.bar',
+    # 'apps.foo.apps.FooConfig',
+    # 'apps.bar.apps.BarConfig',
 ]
 
 AUTH_USER_MODEL = 'users.User'
