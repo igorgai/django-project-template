@@ -16,17 +16,22 @@ django-admin.py startproject <projectname> --template=https://github.com/igorgai
     ```
     (https://docs.pipenv.org/#install-pipenv-today)
     
-2. Initialize virtual environment:
+2. Navigate to the project directory:
+    ```
+    cd {{ project_name }}/
+    ```
+
+3. Initialize virtual environment:
     ```
     pipenv install --three
     ```
-3. Copy the file at *{{ project_name }}/settings/local.example.py* and save it in the same directory under the name of *"local.py"*:
+4. Copy the file at *{{ project_name }}/settings/local.example.py* and save it in the same directory under the name of *"local.py"*:
 
     ```
     cp {{ project_name }}/settings/local.example.py {{ project_name }}/settings/local.py
     ```
 
-4. Install dependencies and initial data: 
+5. Install dependencies and initial data: 
     ```
     pipenv run fab initial_data
     ```
@@ -34,7 +39,7 @@ django-admin.py startproject <projectname> --template=https://github.com/igorgai
 #### Create superuser
 
 ```
-python manage.py createsuperuser
+pipenv run python manage.py createsuperuser
 ```
 
 #### Html/css/js dependencies
