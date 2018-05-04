@@ -18,3 +18,6 @@ class User(AbstractEmailUser):
             return super(User, self).get_full_name()
 
     get_full_name.short_description = 'Full name'
+
+    def __str__(self):
+        return self.get_full_name()
